@@ -1,0 +1,37 @@
+/* Archivo: src/components/Footer.css */
+
+.footer {
+    /* Span the full viewport width */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    background-color: #3a3a3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* Increase minimum height to avoid gaps when overflowing vertically */
+    min-height: 100px;
+    /* Remove extra margin at the bottom if any */
+    margin-top: 2rem;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+  }
+  
+  .footer-icon {
+    width: 30px;
+    height: 30px;
+    fill: #e0e0e0; /* uniform icon color */
+    transition: fill 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .footer-icon:hover {
+    fill: #3498db; /* hover color */
+    transform: scale(1.1);
+  }
+  
