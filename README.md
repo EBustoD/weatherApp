@@ -62,7 +62,7 @@ Una **aplicación del clima** construida con React y Vite, optimizada para dispo
    npm run dev
    ```
 
-   La aplicación se abrirá, por ejemplo, en [http://localhost:3000](http://localhost:3000).
+   La aplicación se abrirá, por ejemplo, en [http://localhost:5173](http://localhost:5173).
 
 ## Uso
 
@@ -75,23 +75,4 @@ Una **aplicación del clima** construida con React y Vite, optimizada para dispo
 - **Previsión:**  
   La previsión de 5 días se muestra debajo del clima actual, adaptándose a la pantalla (cuadrícula en móviles y fila horizontal en PC).
 
-- **Footer:**  
-  El footer contiene enlaces a tus perfiles de LinkedIn y GitHub, con íconos de color uniforme y animaciones al pasar el mouse.
 
-## Contribución
-
-Si deseas contribuir:
-
-1. Haz un *fork* del repositorio.
-2. Crea una rama para tus cambios.
-3. Realiza un *pull request* explicando tus modificaciones.
-
-Por favor, sigue las buenas prácticas de codificación y añade comentarios cuando sea necesario.
-
-## Licencia
-
-Este proyecto está bajo la [Licencia MIT](LICENSE).
-
-## Contacto
-
-Si tienes dudas o sugerencias, puedes contactarme a través de [tuemail@dominio.com](mailto:tuemail@dominio.com).
