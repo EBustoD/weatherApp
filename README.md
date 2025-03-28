@@ -1,54 +1,97 @@
-# React + TypeScript + Vite
+# Weather App - Aplicación del Clima
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una **aplicación del clima** construida con React y Vite, optimizada para dispositivos móviles y con diseño responsivo para PC. La aplicación utiliza la API de OpenWeatherMap para obtener el clima actual y la previsión, y la API de GeoDB Cities para sugerir ciudades basadas en la ubicación del usuario. También incluye soporte para internacionalización (i18n) y un footer con enlaces a LinkedIn y GitHub.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Clima Actual:**  
+  Muestra la ciudad, temperatura, descripción y un ícono representativo del clima actual.
 
-## Expanding the ESLint configuration
+- **Previsión:**  
+  Muestra una previsión de 5 días. En móviles se visualiza en una cuadrícula 2×2 y en PC se muestra en una fila horizontal que se adapta al ancho de la pantalla.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Búsqueda de Ciudades:**  
+  Permite buscar el clima de una ciudad con sugerencias ordenadas por proximidad (usando geolocalización y la API de GeoDB Cities).
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Footer:**  
+  Incluye íconos de LinkedIn y GitHub con animaciones de hover, extendiéndose a lo ancho del viewport.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Internacionalización:**  
+  Soporte para múltiples idiomas mediante *react-i18next*.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Diseño Responsivo:**  
+  Optimizado para móviles y escritorios con CSS Grid y Flexbox.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Tecnologías Utilizadas
+
+- **React** y **TypeScript**
+- **Vite**
+- **react-i18next** para internacionalización
+- **OpenWeatherMap API** para datos del clima
+- **GeoDB Cities API** para sugerencias de ciudades
+- **CSS Flexbox & Grid** para diseño responsivo
+
+## Instalación
+
+1. **Clonar el repositorio:**
+
+   ```bash
+   git clone https://github.com/tuusuario/tu-repositorio.git
+   cd tu-repositorio
+   ```
+
+2. **Instalar las dependencias:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Configurar las variables de entorno:**
+
+   Crea un archivo `.env` en la raíz del proyecto y agrega las siguientes líneas (reemplaza los valores con tus claves reales):
+
+   ```env
+   VITE_OPENWEATHERMAP_API_KEY=tu_clave_de_openweathermap
+   VITE_RAPIDAPI_KEY=tu_clave_de_rapidapi
+   VITE_RAPIDAPI_HOST=wft-geo-db.p.rapidapi.com
+   ```
+
+4. **Iniciar la aplicación en modo desarrollo:**
+
+   ```bash
+   npm run dev
+   ```
+
+   La aplicación se abrirá, por ejemplo, en [http://localhost:3000](http://localhost:3000).
+
+## Uso
+
+- **Clima Actual:**  
+  Al cargar la aplicación, se muestra el clima basado en la geolocalización del usuario.
+
+- **Búsqueda:**  
+  Usa la barra de búsqueda para consultar el clima en otra ciudad. A medida que escribes, aparecerán sugerencias basadas en la proximidad si la geolocalización está habilitada.
+
+- **Previsión:**  
+  La previsión de 5 días se muestra debajo del clima actual, adaptándose a la pantalla (cuadrícula en móviles y fila horizontal en PC).
+
+- **Footer:**  
+  El footer contiene enlaces a tus perfiles de LinkedIn y GitHub, con íconos de color uniforme y animaciones al pasar el mouse.
+
+## Contribución
+
+Si deseas contribuir:
+
+1. Haz un *fork* del repositorio.
+2. Crea una rama para tus cambios.
+3. Realiza un *pull request* explicando tus modificaciones.
+
+Por favor, sigue las buenas prácticas de codificación y añade comentarios cuando sea necesario.
+
+## Licencia
+
+Este proyecto está bajo la [Licencia MIT](LICENSE).
+
+## Contacto
+
+Si tienes dudas o sugerencias, puedes contactarme a través de [tuemail@dominio.com](mailto:tuemail@dominio.com).
